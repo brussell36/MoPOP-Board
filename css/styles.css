@@ -1,0 +1,97 @@
+body {
+  background-image: url(../img/background.jpg);
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  color: white;
+  margin-bottom: 3%;
+}
+
+hr {
+  width: 95%;
+  border-bottom: 2px solid white;
+  border-radius: 3px;
+}
+
+.row {
+  padding-top: 15px;
+  /* display: flex; */
+  /* overflow-x: scroll; */
+}
+
+.container {
+  width: 80%;
+  margin-top: 3%;
+  position: relative;
+}
+
+.head-shot {
+  text-align: center;
+}
+
+.hidden-card {
+  display: none;
+}
+
+#main-card {
+  display: flex;
+  justify-content: flex-start;
+  /* flex-wrap: wrap; */
+  /* justify-items: left; */
+  background-color:#050942;
+}
+
+.main-card-head-shot {
+  text-align: center;
+}
+
+.main-card-head-shot img{
+  /* height: 90%; */
+  width: 430px;
+  height: 400px;
+  margin: 30px;
+}
+
+.head-shot img {
+  width: 430px;
+  height: 400px;
+  margin-top: 40px;
+}
+
+#main-card-content {
+  color: white;
+  margin: 3%;
+}
+
+.member-card {
+  background-color: #050942;
+  height: 50em;
+  overflow-y: scroll;
+}
+
+.profile-name {
+  margin-left: 4%;
+}
+
+.profile-title {
+  margin-left: 4%;
+}
+
+.profile-text {
+  margin-left: 4%;
+  padding-bottom: 2%;
+  position: relative;
+  /* overflow: hidden;  */
+  /* text-overflow: ellipsis; */
+}
+
+.closebtn {
+  display: inline-flex;
+  position: relative;
+  justify-self: right;
+  color: white;
+  font-size: 35px;
+  cursor: pointer;
+  padding: 20px;
+}
