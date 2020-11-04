@@ -24,16 +24,12 @@ hr {
   text-align: center;
 }
 
-.hidden-card {
-  display: none;
-}
-
 .main-card {
   display: flex;
-  justify-content: flex-start;
+  justify-content: center;
   background-color:#050942;
   transition: 1s ease-out;
-  flex-grow: 0 3 auto;
+  flex-grow: 0 1 calc(100% - 1em);
 }
 
 .main-card-head-shot {
@@ -64,12 +60,12 @@ hr {
   background-color: #050942;
   height: 50em;
   cursor: pointer;
-  display: flexbox;
+  flex: 0 1 calc(33% - 1em);
   align-content: left;
   width: 30%;
-  margin: 20px;
+  margin: 20px 0 20px 0;
   overflow: hidden;
-  transition: 1s ease-out;
+  transition: 1s ease-in;
 }
 
 .profile-name {
@@ -99,6 +95,7 @@ hr {
 .card-container {
   display: flex;
   flex-direction: row;
-  justify-content: center;
+  justify-content: space-between;
   flex-wrap: wrap;
+  transition: all 1s ease;
 }
