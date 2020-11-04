@@ -14,12 +14,6 @@ hr {
   border-radius: 3px;
 }
 
-.row {
-  padding-top: 15px;
-  /* display: flex; */
-  /* overflow-x: scroll; */
-}
-
 .container {
   width: 80%;
   margin-top: 3%;
@@ -34,12 +28,12 @@ hr {
   display: none;
 }
 
-#main-card {
+.main-card {
   display: flex;
   justify-content: flex-start;
-  /* flex-wrap: wrap; */
-  /* justify-items: left; */
   background-color:#050942;
+  transition: 1s ease-out;
+  flex-grow: 0 3 auto;
 }
 
 .main-card-head-shot {
@@ -47,33 +41,35 @@ hr {
 }
 
 .main-card-head-shot img{
-  /* height: 90%; */
   width: 430px;
   height: 400px;
   margin: 30px;
 }
 
 .head-shot img {
-  width: 430px;
-  height: 400px;
-  margin-top: 40px;
-  padding: 0 10px 0 10px;
+  width: 95%;
+  height: 25em;
+  margin-top: 3em;
+  padding: 0 5px 0 5px;
 }
 
-#main-card-content {
+.main-card-content {
   color: white;
   margin: 3%;
+  overflow: hidden;
+  overflow: auto;
 }
 
 .member-card {
   background-color: #050942;
   height: 50em;
-  overflow-y: scroll;
   cursor: pointer;
-  display: flexboxx;
+  display: flexbox;
   align-content: left;
   width: 30%;
   margin: 20px;
+  overflow: hidden;
+  transition: 1s ease-out;
 }
 
 .profile-name {
@@ -85,15 +81,13 @@ hr {
 }
 
 .profile-text {
-  margin-left: 4%;
+  margin: 4%;
   padding-bottom: 2%;
   position: relative;
-  /* overflow: hidden;  */
-  /* text-overflow: ellipsis; */
 }
 
 .closebtn {
-  display: inline-flex;
+  display: inline;
   position: relative;
   justify-self: right;
   color: white;
