@@ -1,4 +1,7 @@
 $(document).ready(function() {
+  // const text = $(".profile-text").text();
+  // const newText = text.length < 401 ? text : text.slice(0, 400)  + '...';
+  // $(".profile-text").text(newText);
   
   $(".member-card").click(function() {
     $(this).addClass("main-card");
