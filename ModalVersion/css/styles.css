@@ -60,7 +60,6 @@ hr {
   }
 }
 .card:hover .card__inner {
-  /* background-color: #1abc9c; */
   transform: scale(1.05);
 }
 .card__inner {
@@ -210,7 +209,6 @@ hr {
   top: 0;
   width: 100%; /* Full width */
   height: 100%; /* Full height */
-  overflow: auto; /* Enable scroll if needed */
   background-color: rgb(0,0,0); /* Fallback color */
   background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
 }
@@ -218,12 +216,13 @@ hr {
 /* Modal Content */
 .modal-content {
   display: flex;
-  background-color:rgba(0, 0, 32, 0.9);
+  background-color:rgba(0, 0, 32, 1);
   color: white;
   margin: auto;
   padding: 0;
-  border: 1px solid #888;
-  width: 80%;
+  width: 70em;
+  height: 32em;
+  overflow: auto;
   box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
   -webkit-animation-name: animatetop;
   -webkit-animation-duration: 0.4s;
@@ -248,9 +247,7 @@ hr {
   font-size: 28px;
   font-weight: bold;
   position: absolute;
-  top: 110px;
-  right: 205px;
-  display: inline-block;
+  margin: 10px 15px;
 }
 
 .close:hover,
@@ -261,31 +258,66 @@ hr {
 }
 
 .modal-head-shot img {
-  width: 300px;
+  width: 325px;
 }
 
 .modal-profile-name {
-  font-size: 2em;
-  margin-left: 3%;
+  font-size: 2.5em;
+  margin-left: 20px;
 }
 
 .modal-profile-title {
-  margin-left: 3%;
+  margin-left: 20px;
   font-size: 1.5em;
 }
 
 .head-shot-wrapper {
-  margin-top: 2%;
   padding: 20px;
 }
 
 .modal-text-container {
-  padding: 0 40px 20px;
-  justify-self: left;
+  padding: 0 20px 20px;
   line-height: 1.5;
 }
 
 .modal-content, .i-container {
   display: flex;
   justify-content: flex-end;
+}
+
+.modal-content::-webkit-scrollbar {
+  width: 12px;               /* width of the entire scrollbar */
+}
+.modal-content::-webkit-scrollbar-track {
+  background: #1f3c88;        /* color of the tracking area */
+}
+.modal-content::-webkit-scrollbar-thumb {
+  background-color: #790c5a;    /* color of the scroll thumb */
+  border-radius: 20px;       /* roundness of the scroll thumb */
+  border: 3px solid #1f3c88;  /* creates padding around scroll thumb */
+}
+
+@media screen and (max-width: 1200px) {
+  
+  .modal-content {
+    flex-direction: row;
+    justify-content: flex-start;
+    width: 97%;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .modal-content {
+    flex-wrap: wrap;
+    height: 40em;
+  }
+
+  .head-shot-wrapper {
+    margin: auto;
+  }
+
+  .close {
+    position: relative;
+    flex-direction: row;
+  }
 }
