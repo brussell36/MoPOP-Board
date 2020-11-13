@@ -12,6 +12,10 @@ body {
   background-attachment: fixed;
 }
 
+body .modal-open {
+  overflow-y: hidden;
+}
+
 hr {
   width: 95%;
 }
@@ -87,12 +91,6 @@ hr {
 .card__expander {
   transition: all 0.2s ease-in-out;
   background-color: rgba(0, 0, 32, 0.8);
-  /* width: 100%;
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-transform: uppercase; */
   color: #eceef1;
   font-size: 1em;
   line-height: 1.5;
@@ -222,7 +220,6 @@ hr {
   padding: 0;
   width: 70em;
   height: 32em;
-  overflow: auto;
   box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
   -webkit-animation-name: animatetop;
   -webkit-animation-duration: 0.4s;
@@ -278,6 +275,8 @@ hr {
 .modal-text-container {
   padding: 0 20px 20px;
   line-height: 1.5;
+  height: 240px;
+  overflow: auto;
 }
 
 .modal-content, .i-container {
@@ -285,13 +284,13 @@ hr {
   justify-content: flex-end;
 }
 
-.modal-content::-webkit-scrollbar {
+.modal-text-container::-webkit-scrollbar {
   width: 12px;               /* width of the entire scrollbar */
 }
-.modal-content::-webkit-scrollbar-track {
+.modal-text-container::-webkit-scrollbar-track {
   background: #1f3c88;        /* color of the tracking area */
 }
-.modal-content::-webkit-scrollbar-thumb {
+.modal-text-container::-webkit-scrollbar-thumb {
   background-color: #790c5a;    /* color of the scroll thumb */
   border-radius: 20px;       /* roundness of the scroll thumb */
   border: 3px solid #1f3c88;  /* creates padding around scroll thumb */
@@ -304,20 +303,62 @@ hr {
     justify-content: flex-start;
     width: 97%;
   }
+
+  .modal-text-container {
+    height: 220px;
+  }
 }
 
 @media screen and (max-width: 650px) {
   .modal-content {
     flex-wrap: wrap;
-    height: 40em;
+    justify-content: flex-end;
+    height: 48em;
   }
 
-  .head-shot-wrapper {
-    margin: auto;
+  .modal-head-shot img {
+    width: 100%;
+  }
+
+  .modal-profile-name {
+    font-size: 2em;
+  }
+
+  .modal-profile-title {
+    font-size: 1em;
+  }
+
+  .modal-content .i-container {
+    float: right;
   }
 
   .close {
     position: relative;
-    flex-direction: row;
+  }
+
+  .modal-text-container {
+    height: 170px;
+  }
+}
+
+@media screen and (max-width: 350px) {
+  .modal-text-container {
+    height: 220px;
+  }
+
+  .modal-profile-name {
+    font-size: 24px;
+  }
+
+  .profile-name {
+    font-size: 16px;
+  }
+
+  .profile-title {
+    font-size: 14px;
+  }
+
+  .head-shot-wrapper {
+    padding-bottom: 0;
   }
 }
