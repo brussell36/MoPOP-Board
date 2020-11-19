@@ -1,5 +1,4 @@
 $(document).ready(function() {
-  console.log("document loaded");
 
   $('.card').click(function () {
 
@@ -14,10 +13,7 @@ $(document).ready(function() {
     $(".modal-head-shot").html(selectedImage);
 
     $(".modal").css({"display": "block"});
-
-    // modal-text-container
-    // "modal-head-shot
-    // modal-text-container
+    $("body").css({"overflow": "hidden"});
   });
 
   // Get the modal
@@ -29,12 +25,14 @@ $(document).ready(function() {
   // Get the <span> element that closes the modal
   var span = document.getElementsByClassName("close")[0];
 
+  var body = document.getElementsByTagName("body")[0];
+
   // When the user clicks the button, open the modal 
   btn.onclick = function() {
     modal.style.display = "block";
     body.style.overflow = "hidden";
   }
-
+  
   // When the user clicks on <span> (x), close the modal
   span.onclick = function() {
     modal.style.display = "none";

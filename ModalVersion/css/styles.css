@@ -188,10 +188,23 @@ hr {
 
 .head-shot img {
   width: 100%;
+  height: 200px;
+}
+
+i {
+  color: white;
+  margin-right: 20px;
+  margin-top: 10px;
+}
+
+i:hover {
+  color: rgba(255, 78, 93,1);
 }
 
 .profile-title {
   font-size: 14px;
+  font-weight: 300;
+  text-transform: none;
 }
 
 .profile-name {
@@ -241,21 +254,23 @@ hr {
 /* The Close Button */
 .close {
   color: white;
-  font-size: 28px;
-  font-weight: bold;
+  background-color: rgba(255, 78, 93,1);
+  font-size: 1em;
+  margin: 10px 10px;
+  border: 0;
+  padding: 10px;
   position: absolute;
-  margin: 10px 15px;
+  right: 400px;
 }
 
 .close:hover,
 .close:focus {
-  color: #495464;
-  text-decoration: none;
   cursor: pointer;
 }
 
 .modal-head-shot img {
   width: 325px;
+  height: 325px;
 }
 
 .modal-profile-name {
@@ -273,27 +288,23 @@ hr {
 }
 
 .modal-text-container {
-  padding: 0 20px 20px;
+  padding: 0 20px;
   line-height: 1.5;
   height: 240px;
   overflow: auto;
-}
-
-.modal-content, .i-container {
-  display: flex;
-  justify-content: flex-end;
 }
 
 .modal-text-container::-webkit-scrollbar {
   width: 12px;               /* width of the entire scrollbar */
 }
 .modal-text-container::-webkit-scrollbar-track {
-  background: #1f3c88;        /* color of the tracking area */
+  background: rgba(3, 11, 119, 1);        /* color of the tracking area */
+  border-radius: 20px;
 }
 .modal-text-container::-webkit-scrollbar-thumb {
   background-color: #790c5a;    /* color of the scroll thumb */
   border-radius: 20px;       /* roundness of the scroll thumb */
-  border: 3px solid #1f3c88;  /* creates padding around scroll thumb */
+  border: 3px solid rgba(3, 11, 119, 1);  /* creates padding around scroll thumb */
 }
 
 @media screen and (max-width: 1200px) {
@@ -307,17 +318,20 @@ hr {
   .modal-text-container {
     height: 220px;
   }
+
+  .close {
+    right: 15px;
+  }
 }
 
-@media screen and (max-width: 650px) {
-  .modal-content {
-    flex-wrap: wrap;
-    justify-content: flex-end;
-    height: 48em;
-  }
+@media screen and (max-width: 800px) {
 
-  .modal-head-shot img {
+  /* .modal-content {
     width: 100%;
+  } */
+
+  .profile-title {
+    font-size: 13px;
   }
 
   .modal-profile-name {
@@ -325,29 +339,76 @@ hr {
   }
 
   .modal-profile-title {
-    font-size: 1em;
+    font-size: 1.2em;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .modal {
+    padding: 0;
   }
 
-  .modal-content .i-container {
-    float: right;
+  .modal-content {
+    flex-wrap: wrap;
+    height: 100%;
+    width: 100%;
+  }
+
+  .modal-head-shot img {
+    width: 100%;
+    height: 280px;
+  }
+
+  .modal-profile-name {
+    font-size: 1.2em;
+  }
+
+  .modal-profile-title {
+    font-size: 14px;
+  }
+
+  .head-shot-wrapper {
+    padding: 20px 20px 0 20px;
+  }
+
+  .modal-text-container {
+    height: 200px;
   }
 
   .close {
     position: relative;
+    left: 10px;
   }
 
-  .modal-text-container {
-    height: 170px;
+  h3 {
+    margin: 10px 0;
   }
 }
 
-@media screen and (max-width: 350px) {
+@media screen and (max-width: 375px) {
   .modal-text-container {
-    height: 220px;
+    height: 170px;
+  }
+
+  .modal-head-shot {
+    text-align: center;
+  }
+
+  .modal-head-shot img {
+    width: 90%;
+    height: 230px;
   }
 
   .modal-profile-name {
-    font-size: 24px;
+    font-size: 20px;
+  }
+
+  h3 {
+    margin: 10px 0;
+  }
+
+  .modal-profile-title {
+    font-size: 13px;
   }
 
   .profile-name {
@@ -355,10 +416,6 @@ hr {
   }
 
   .profile-title {
-    font-size: 14px;
-  }
-
-  .head-shot-wrapper {
-    padding-bottom: 0;
+    font-size: 12px;
   }
 }
